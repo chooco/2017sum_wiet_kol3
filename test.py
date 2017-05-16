@@ -11,12 +11,6 @@ class Mock(object):
     def __call__(self, *args, **kwargs):
         self.was_called = True
 
-class SysStdOut(object):
-    def __init__(self):
-        self.history = []
-
-    def write(self, msg):
-        self.history.append(msg)
 
 class TestPlaneTask(unittest.TestCase):
     def angle_test(self):
